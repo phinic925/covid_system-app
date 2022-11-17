@@ -18,15 +18,7 @@ function CovidTable(){
         })
         .then(res=> res.json())
         .then(data => {
-            // const statistics =[];
-            
-            // for (const key in data){
-            //     const statistic = {
-            //       id:key,
-            //       ...data[key]
-            //     };
-            //     statistics.push(statistic);
-            //   }
+           
             setData(data)
             console.log(data)
         });
