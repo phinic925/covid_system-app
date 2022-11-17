@@ -46,7 +46,7 @@ function CovidTable(){
             </div>        
 
 <div className="table-responsive">
-      <table className=" table table-bordered table-stripped tabl">
+      <table className=" table table-bordered  table-stripped  tabl">
         <thead>
           <th>Continent</th>
           <th>Country</th>
@@ -54,6 +54,8 @@ function CovidTable(){
           <th>Deaths</th>
           <th>Cases</th>
           <th>Tests</th>
+          <th>Day</th>
+          <th>Time</th>
           
         </thead>
        
@@ -76,11 +78,11 @@ function CovidTable(){
               <td>{e.continent}</td>
               <td>{e.country}</td>
               <td>{e.population}</td>
-              {/* <td>{e.cases}</td>
-               <td>{e.population}</td>
-               <td>{e.population}</td> */}
-              {/* <td>{data.bids[i].price}</td>
-              <td>{data.bids[i].amount}</td> */}
+              <td> {e.deaths.total}</td>
+               <td> {e.cases.total}</td>
+               <td> {e.tests.total}</td>
+               <td> {e.day}</td>
+               <td> {e.time} </td>
             </tr>
           </>
         )

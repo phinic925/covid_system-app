@@ -12,6 +12,7 @@ import {
   Route,
   
 } from 'react-router-dom';
+import Country from './components/country';
 
 
 
@@ -22,6 +23,11 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path='/' element={<CovidTable/>} />
+          <Route path='/countries' element={<Country/>} />
+          
+          
+          
+
 
         </Routes>
      

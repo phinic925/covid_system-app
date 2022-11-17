@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 
 function Country(){
     const[data, setData] = useState({response: []});
@@ -21,19 +21,11 @@ function Country(){
 
     }, []);
     return(
-        <>
-        {data.response.map((e) => {
-            return(
-                <>
-                  <ul key={e.Country}class="list-group">
-  <li class="list-group-item">{e.Country}</li>
-  
-</ul>
-                </>
-              
-            )
-        })}
-        </>
+        <ul className="list-group">
+                {data.response.map(function(name, index){
+                    return <li key={ index } className="list-group-item active">{name}</li>;
+                  })}
+            </ul>
     )
 }
 export default Country;
