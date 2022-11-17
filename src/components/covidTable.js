@@ -64,7 +64,20 @@ function CovidTable(){
           <th>Tests</th>
           
         </thead>
-      {data.response.map((e, i) => {
+       
+       
+           {data.response
+           
+           .filter((e) =>{
+            if (search === ""){
+                return e;
+            }
+            else if(e.country.toLowerCase().includes(search.toLowerCase())){
+                return e;
+            }
+        }) 
+           
+           .map((e, i) => {
         return (
           <>
             <tr key={e.continent}>
@@ -80,6 +93,8 @@ function CovidTable(){
           </>
         )
       })}
+         
+     
       </table>
     </div>
         
