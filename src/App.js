@@ -13,6 +13,8 @@ import {
   
 } from 'react-router-dom';
 import Country from './components/country';
+import History from './components/History';
+
 
 
 
@@ -24,6 +26,7 @@ function App() {
         <Routes>
           <Route path='/' element={<CovidTable/>} />
           <Route path='/countries' element={<Country/>} />
+          <Route path= '/history' element={<History/>}/>
           
           
           
